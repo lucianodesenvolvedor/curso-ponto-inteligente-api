@@ -26,8 +26,10 @@ import javax.persistence.Transient;
 import com.api.enums.PerfilEnum;
 
 import lombok.Data;
+import lombok.ToString;
 
 @Data
+@ToString
 @Entity
 @Table(name = "funcionario")
 public class Funcionario implements Serializable {
@@ -45,13 +47,13 @@ public class Funcionario implements Serializable {
 	private String senha;
 	@Column(name = "cpf", length = 15, nullable = false)
 	private String cpf;
-	@Column(name = "valor_hora", nullable = false)
+	@Column(name = "valor_hora")
 	private BigDecimal valorHora;
-	@Column(name = "quantidade_horas_trabalho_dia", nullable = false)
+	@Column(name = "quantidade_horas_trabalho_dia")
 	private float quantidadeHorasTrabalhoDia;
-	@Column(name = "quantidade_horas_almoco", nullable = false)
+	@Column(name = "quantidade_horas_almoco")
 	private float quantidadeHorasAlmoco;
-	@Column(name = "perfil", nullable = false)
+	@Column(name = "perfil")
 	@Enumerated(EnumType.STRING)
 	private PerfilEnum perfil;
 	@Column(name = "data_criacao", nullable = false)

@@ -7,11 +7,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
 
 import com.api.entity.Lancamento;
 import com.api.repository.LancamentoRepository;
 import com.api.service.LancamentoService;
 
+@Service
 public class LancamentoServiceImplementation implements LancamentoService {
 
 	private static final Logger log = LoggerFactory.getLogger(LancamentoServiceImplementation.class);
@@ -42,5 +44,4 @@ public class LancamentoServiceImplementation implements LancamentoService {
 		log.info("Removendo um lançamento da base dados {}", "");
 		this.lancamentoRepository.deleteById(id);
 	}
-
 }

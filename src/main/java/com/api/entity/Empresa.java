@@ -17,8 +17,10 @@ import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 
 import lombok.Data;
+import lombok.ToString;
 
 @Data
+@ToString
 @Entity
 @Table(name = "empresa")
 public class Empresa implements Serializable {

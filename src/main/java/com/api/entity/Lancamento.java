@@ -22,8 +22,10 @@ import javax.persistence.TemporalType;
 import com.api.enums.TipoEnum;
 
 import lombok.Data;
+import lombok.ToString;
 
 @Data
+@ToString
 @Entity
 @Table(name = "lancamento")
 public class Lancamento implements Serializable {
